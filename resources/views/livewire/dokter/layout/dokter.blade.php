@@ -9,7 +9,7 @@
     @livewireStyles
 </head>
 <body>
-    <div class="flex min-h-screen">
+    <div class="flex w-full">
         <div class="w-64 bg-gray-800 text-white">
             @livewire('dokter.sidebar')
         </div>

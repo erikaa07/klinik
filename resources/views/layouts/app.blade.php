@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Admin - {{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,7 +20,8 @@
     <body class="font-sans antialiased">
         <x-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="w-full bg-gray-100">
+            {{-- Bisa ganti dengan menu khusus admin --}}
             @livewire('navigation-menu')
 
             <!-- Page Heading -->

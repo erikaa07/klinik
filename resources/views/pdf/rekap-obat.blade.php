@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Rekap Obat PDF</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        table { width:100%; border-collapse: collapse; }
-        th, td { border:1px solid #333; padding:6px 8px; }
-        th { background:#eee; }
+        body { 
+            font-family: 'DejaVu Sans', sans-serif; 
+            font-size: 10px; 
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 20px; 
+        }
+        th, td { 
+            border: 1px solid #888; 
+            padding: 5px; 
+            text-align: left; 
+        }
+        th { 
+            background: #eee; 
+            font-weight: bold;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <h2>Rekap Obat</h2>
+    <h2>Rekap Data Obat</h2>
     <table>
         <thead>
             <tr>
@@ -29,16 +48,16 @@
         <tbody>
             @foreach($obats as $obat)
             <tr>
-                <td>{{ $obat->nama }}</td>
-                <td>{{ number_format($obat->harga_beli) }}</td>
-                <td>{{ number_format($obat->harga_jual) }}</td>
-                <td>{{ $obat->no_batch }}</td>
-                <td>{{ $obat->exp_date }}</td>
-                <td>{{ $obat->stok_awal }}</td>
-                <td>{{ $obat->jumlah_masuk ?? 0 }}</td>
-                <td>{{ $obat->jumlah_keluar ?? 0 }}</td>
-                <td>{{ $obat->sisa_stok ?? 0 }}</td>
-                <td>{{ number_format($obat->laba ?? 0) }}</td>
+                <td>{{ is_array($obat) ? $obat['nama'] : $obat->nama }}</td>
+                <td>{{ number_format(is_array($obat) ? $obat['harga_beli'] : $obat->harga_beli) }}</td>
+                <td>{{ number_format(is_array($obat) ? $obat['harga_jual'] : $obat->harga_jual) }}</td>
+                <td>{{ is_array($obat) ? $obat['no_batch'] : $obat->no_batch }}</td>
+                <td>{{ is_array($obat) ? $obat['exp_date'] : $obat->exp_date }}</td>
+                <td>{{ is_array($obat) ? $obat['stok_awal'] : $obat->stok_awal }}</td>
+                <td>{{ is_array($obat) ? $obat['jumlah_masuk'] : ($obat->jumlah_masuk ?? 0) }}</td>
+                <td>{{ is_array($obat) ? $obat['jumlah_keluar'] : ($obat->jumlah_keluar ?? 0) }}</td>
+                <td>{{ is_array($obat) ? $obat['sisa_stok'] : ($obat->sisa_stok ?? 0) }}</td>
+                <td>{{ is_array($obat) ? $obat['laba'] : ($obat->laba ?? 0) }}</td>
             </tr>
             @endforeach
         </tbody>

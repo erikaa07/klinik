@@ -11,7 +11,7 @@
                     <path d="M3 10h18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </span>
-            <span class="text-lg font-semibold text-blue-700">Inventory Obat</span>
+            <span class="text-lg font-semibold text-blue-700">Inventory Obat (Khusus Admin)</span>
         </div>
         <p class="text-gray-600 text-sm">Kelola data stok obat, update jumlah, tambah stok baru, dan monitoring inventory.</p>
     </button>

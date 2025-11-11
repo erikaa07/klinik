@@ -9,7 +9,8 @@ class InventoryObat extends Component
     public function goToInventory()
     {
         if (auth()->user()->role !== 'admin') {
-            $this->dispatchBrowserEvent('toast');
+            // Livewire v3: gunakan dispatch() untuk event browser
+            $this->dispatch('show-toast', message: 'Akses ditolak! Hanya admin yang bisa mengakses halaman ini.');
         } else {
             return redirect()->route('admin.rekap-obat');
         }

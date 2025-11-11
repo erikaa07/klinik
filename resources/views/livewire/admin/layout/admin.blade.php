@@ -9,9 +9,9 @@
     @livewireStyles
 </head>
 <body>
-<div class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen flex">
+<div class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 max-w-full flex">
     @include('livewire.admin.layout.sidebar')
-    <main class="flex-1 p-8 overflow-x-auto">
+    <main class="flex-1 p-8 overflow-x-auto w-full">
         {{ $slot }}
     </main>
 </div>

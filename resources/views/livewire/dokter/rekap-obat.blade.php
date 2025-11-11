@@ -1,4 +1,4 @@
-<div class="overflow-x-auto bg-white p-6 rounded-lg shadow-lg max-w-4xl w-full mx-auto">
+<div class="overflow-x-auto bg-grey p-6 rounded-lg shadow-lg max-w-4xl w-full mx-auto">
     <h2 class="text-xl font-bold mb-6 text-gray-800 text-center sm:text-left">Rekap Obat</h2>
     
     {{-- Search bar & Export buttons --}}
@@ -27,7 +27,7 @@
         </button>
     </div>
 
-    <table class="min-w-full border border-gray-200 bg-white rounded-lg overflow-hidden text-sm filament-tables-table">
+    <table class="min-w-full border border-gray-200 bg-grey rounded-lg overflow-hidden text-sm filament-tables-table">
         <thead>
             <tr class="bg-primary-100">
                 <th class="px-4 py-3 border-b text-left font-semibold text-primary-700">Nama</th>

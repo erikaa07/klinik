@@ -1,4 +1,4 @@
-<div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex">
+<div class="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex">
     <!-- Sidebar -->
     <aside class="w-64 bg-gray-900 text-gray-100 flex flex-col border-r border-gray-800">
         <div class="px-6 py-5 flex items-center gap-3 border-b border-gray-800">

@@ -16,14 +16,8 @@ return new class extends Migration
             $table->string('no_batch');
             $table->date('exp_date');
             $table->integer('stok_awal');
-            Schema::table('obat', function (Blueprint $table) {
-        if (!Schema::hasColumn('obat', 'jumlah_masuk')) {
             $table->integer('jumlah_masuk')->default(0);
-        }
-        if (!Schema::hasColumn('obat', 'jumlah_keluar')) {
             $table->integer('jumlah_keluar')->default(0);
-        }
-    });// Tambahkan ini
             $table->timestamps();
         });
     }
