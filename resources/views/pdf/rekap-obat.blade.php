@@ -48,16 +48,16 @@
         <tbody>
             @foreach($obats as $obat)
             <tr>
-                <td>{{ is_array($obat) ? $obat['nama'] : $obat->nama }}</td>
-                <td>{{ number_format(is_array($obat) ? $obat['harga_beli'] : $obat->harga_beli) }}</td>
-                <td>{{ number_format(is_array($obat) ? $obat['harga_jual'] : $obat->harga_jual) }}</td>
-                <td>{{ is_array($obat) ? $obat['no_batch'] : $obat->no_batch }}</td>
-                <td>{{ is_array($obat) ? $obat['exp_date'] : $obat->exp_date }}</td>
-                <td>{{ is_array($obat) ? $obat['stok_awal'] : $obat->stok_awal }}</td>
-                <td>{{ is_array($obat) ? $obat['jumlah_masuk'] : ($obat->jumlah_masuk ?? 0) }}</td>
-                <td>{{ is_array($obat) ? $obat['jumlah_keluar'] : ($obat->jumlah_keluar ?? 0) }}</td>
-                <td>{{ is_array($obat) ? $obat['sisa_stok'] : ($obat->sisa_stok ?? 0) }}</td>
-                <td>{{ is_array($obat) ? $obat['laba'] : ($obat->laba ?? 0) }}</td>
+                <td>{{ is_array($obat) ? ($obat['nama'] ?? '-') : ($obat->nama ?? '-') }}</td>
+                <td>{{ number_format(is_array($obat) ? ($obat['harga_beli'] ?? 0) : ($obat->harga_beli ?? 0)) }}</td>
+                <td>{{ number_format(is_array($obat) ? ($obat['harga_jual'] ?? 0) : ($obat->harga_jual ?? 0)) }}</td>
+                <td>{{ is_array($obat) ? ($obat['no_batch'] ?? '-') : ($obat->no_batch ?? '-') }}</td>
+                <td>{{ is_array($obat) ? ($obat['exp_date'] ?? '-') : ($obat->exp_date ?? '-') }}</td>
+                <td>{{ is_array($obat) ? ($obat['stok_awal'] ?? 0) : ($obat->stok_awal ?? 0) }}</td>
+                <td>{{ is_array($obat) ? ($obat['jumlah_masuk'] ?? 0) : ($obat->jumlah_masuk ?? 0) }}</td>
+                <td>{{ is_array($obat) ? ($obat['jumlah_keluar'] ?? 0) : ($obat->jumlah_keluar ?? 0) }}</td>
+                <td>{{ is_array($obat) ? ($obat['sisa_stok'] ?? 0) : ($obat->sisa_stok ?? 0) }}</td>
+                <td>{{ is_array($obat) ? ($obat['laba'] ?? 0) : ($obat->laba ?? 0) }}</td>
             </tr>
             @endforeach
         </tbody>
